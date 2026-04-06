@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+  <html lang="fr">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ZYNTEX — La plateforme des informaticiens congolais</title>
+          <link rel="stylesheet" href="CSS/bootstrap.min.css">
+          <link rel="stylesheet" href="CSS/styles.css">
+    </head>
+
+    <body>
+
+      <div class="cursor" id="cursor"></div>
+      <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- NAV -->
+    <nav>
+      <div class="logo">ZYN
+        <span>TEX</span>
+      </div>
+      <div class="nav-badge">BIENTÔT DISPONIBLE</div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-glow2"></div>
+
+      <div class="hero-tag">🇨🇬 Fait pour le Congo. Pensé pour le monde.</div>
+
+      <h1>
+        La plateforme des
+        <span class="line2">talents tech congolais</span>
+      </h1>
+
+      <p class="hero-sub">
+        ZYNTEX connecte les informaticiens de la République du Congo avec les entreprises, les opportunités et une communauté d'élite. Un seul endroit. Un écosystème complet.
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">
+          Rejoindre la liste d'attente
+        </button>
+        <button class="btn-secondary" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+          Découvrir la plateforme
+        </button>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">1er</span>
+          <span class="stat-label">Au Congo</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Piliers clés</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">∞</span>
+          <span class="stat-label">Opportunités</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <section id="features">
+      <div class="section-label">Ce que ZYNTEX offre</div>
+      <h2 class="section-title">Une expérience. Trois puissances.</h2>
+      <p class="section-sub">Tout ce dont un informaticien congolais a besoin pour évoluer, trouver des missions et grandir professionnellement.</p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">👤</div>
+          <div class="feature-title">ZYNTEX Profils</div>
+          <p class="feature-desc">Créez votre CV vivant. Showcasez vos projets, compétences et expériences à des milliers d'entreprises congolaises et internationales.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💼</div>
+          <div class="feature-title">ZYNTEX Missions</div>
+          <p class="feature-desc">Trouvez des missions tech locales et internationales. Les entreprises publient, vous postulez, vous livrez. Simple, rapide, sécurisé.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🧠</div>
+          <div class="feature-title">ZYNTEX Learn</div>
+          <p class="feature-desc">Apprenez, partagez, progressez. Des ressources, discussions et formations créées par et pour les informaticiens congolais.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <div class="how-section">
+      <div class="how-inner">
+        <div class="section-label">Comment ça marche</div>
+        <h2 class="section-title">Démarrez en 3 étapes.</h2>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-title">Créez votre profil</div>
+            <p class="step-desc">Inscrivez-vous gratuitement et construisez votre profil professionnel en quelques minutes.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-title">Connectez-vous</div>
+            <p class="step-desc">Rejoignez la communauté, découvrez des missions, et échangez avec d'autres talents tech du Congo.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-title">Évoluez et gagnez</div>
+            <p class="step-desc">Décrochez vos premières missions, construisez votre réputation et développez votre carrière.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WAITLIST -->
+    <div class="waitlist-section" id="waitlist">
+      <div class="waitlist-box">
+        <div class="waitlist-glow"></div>
+        <h2>Soyez parmi les premiers.</h2>
+        <p>ZYNTEX arrive bientôt. Inscrivez-vous maintenant pour rejoindre la liste d'attente et accéder en priorité à la plateforme dès son lancement.</p>
+
+        <div class="form-row">
+          <input type="text" class="form-input" id="nameInput" placeholder="Votre prénom">
+          <input type="email" class="form-input" id="emailInput" placeholder="Votre email">
+        </div>
+        <select class="form-select" id="profileSelect" aria-label="Choisir votre profil professionnel">
+          <option value="" disabled selected>Votre profil</option>
+          <option value="dev">Développeur web / mobile</option>
+          <option value="reseau">Technicien réseau / systèmes</option>
+          <option value="data">Data / IA / Machine Learning</option>
+          <option value="design">Designer UI/UX</option>
+          <option value="cybersec">Cybersécurité</option>
+          <option value="etudiant">Étudiant en informatique</option>
+          <option value="entreprise">Entreprise cherchant des talents</option>
+          <option value="autre">Autre profil tech</option>
+        </select>
+
+          <button class="btn-primary" onclick="handleSignup()">
+            Rejoindre ZYNTEX →
+          </button>
+        </div>
+
+        <div class="success-msg" id="successMsg">
+          ✓ Vous êtes sur la liste ! On vous contacte dès le lancement de ZYNTEX.
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-logo">ZYN
+        <span>TEX</span>
+      </div>
+      <div class="footer-copy">© 2026 ZYNTEX — République du Congo · Pointe-Noire</div>
+    </footer>
+
+    <script>
+      // Custom cursor
+      const cursor = document.getElementById('cursor');
+      const ring = document.getElementById('cursorRing');
+      let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+
+      document.addEventListener('mousemove', e => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursor.style.left = mouseX - 6 + 'px';
+        cursor.style.top = mouseY - 6 + 'px';
+      });
+
+      function animateRing() {
+        ringX += (mouseX - ringX - 20) * 0.12;
+        ringY += (mouseY - ringY - 20) * 0.12;
+        ring.style.left = ringX + 'px';
+        ring.style.top = ringY + 'px';
+        requestAnimationFrame(animateRing);
+      }
+      animateRing();
+
+      document.querySelectorAll('button, a, input, select').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          cursor.style.transform = 'scale(2)';
+          ring.style.transform = 'scale(1.5)';
+          ring.style.borderColor = 'rgba(0,245,196,0.6)';
+        });
+        el.addEventListener('mouseleave', () => {
+          cursor.style.transform = 'scale(1)';
+          ring.style.transform = 'scale(1)';
+          ring.style.borderColor = 'rgba(0,245,196,0.4)';
+        });
+      });
+
+      // Waitlist signup
+      function handleSignup() {
+        const name = document.getElementById('nameInput').value.trim();
+        const email = document.getElementById('emailInput').value.trim();
+        const profile = document.getElementById('profileSelect').value;
+
+        if (!name || !email || !profile) {
+          alert('Veuillez remplir tous les champs.');
+          return;
+        }
+
+        if (!email.includes('@')) {
+          alert('Veuillez entrer un email valide.');
+          return;
+        }
+
+        // Store locally
+        const entry = { name, email, profile, date: new Date().toISOString() };
+        const existing = JSON.parse(localStorage.getItem('zyntex_waitlist') || '[]');
+        existing.push(entry);
+        localStorage.setItem('zyntex_waitlist', JSON.stringify(existing));
+
+        document.getElementById('nameInput').value = '';
+        document.getElementById('emailInput').value = '';
+        document.getElementById('profileSelect').value = '';
+        document.getElementById('successMsg').style.display = 'block';
+      }
+
+      // Scroll reveal
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.feature-card, .step, .waitlist-box').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+        observer.observe(el);
+      });
+    </script>
+    </body>
+  </html>
